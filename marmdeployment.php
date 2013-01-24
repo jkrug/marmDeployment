@@ -35,7 +35,7 @@ if (php_sapi_name() == "cli")
     
     //Go to project root and deploy there
     chdir($baseDir);
-    system("git pull origin " . $conf['project']['status']);
+    system("git pull origin " . $conf['project']['ref']);
     
     //Now deploy the
     foreach ($conf['modules'] as $module)
@@ -46,14 +46,14 @@ if (php_sapi_name() == "cli")
             mkdir($baseDir.$conf['dir'], 0755, true);
             chdir($baseDir.$module['dir']);
             system("git init");
-            system("git pull origin ".$module['status']);
+            system("git pull origin ".$module['ref']);
         }
         else
         {
             chdir($baseDir.$module['dir']);
         }
-        // pull the specified status
-        system("git pull origin ".$module['status']);
+        // pull the specified ref
+        system("git pull origin ".$module['ref']);
     }
     chdir($baseDir . 'marmdeployment/');
 }
