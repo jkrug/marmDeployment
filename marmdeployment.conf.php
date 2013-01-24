@@ -14,22 +14,22 @@ $config = array(
         'modules' => array(
             'solr' => array(
                 'dir'     => 'modules/marm/solr',
-                'ref'  => 'master',
+                'ref'     => 'master',
                 'remote'  => 'ssh://git@paula.marmalade.de/marmsolr.git'
             ),
             'libreka' => array(
                 'dir'     => 'modules/marm/libreka',
-                'ref'  => 'master',
+                'ref'     => 'master',
                 'remote'  => 'ssh://git@paula.marmalade.de/marmlibreka.git'
             ),
             'picturesubdir' => array(
                 'dir'     => 'modules/marm/picturesubdirs',
-                'ref'  => 'master',
+                'ref'     => 'master',
                 'remote'  => 'ssh://git@paula.marmalade.de/marmpicturesubdirs.git'
             ),
         ),
         'project' => array(
-            'ref'  => 'master',
+            'ref'     => 'master',
             'remote'  => 'ssh://git@paula.marmalade.de/project.git'
         ),
     ),
@@ -37,22 +37,22 @@ $config = array(
         'modules' => array(
             'solr' => array(
                 'dir'     => 'modules/marm/solr',
-                'ref'  => 'test',
+                'ref'     => 'test',
                 'remote'  => 'ssh://git@paula.marmalade.de/marmsolr.git'
             ),
             'libreka' => array(
                 'dir'     => 'modules/marm/libreka',
-                'ref'  => 'test',
+                'ref'     => 'test',
                 'remote'  => 'ssh://git@paula.marmalade.de/marmlibreka.git'
             ),
             'picturesubdir' => array(
                 'dir'     => 'modules/marm/picturesubdirs',
-                'ref'  => 'test',
+                'ref'     => 'test',
                 'remote'  => 'ssh://git@paula.marmalade.de/marmpicturesubdirs.git'
             ),
         ),
         'project' => array(
-            'ref'  => 'test',
+            'ref'     => 'test',
             'remote'  => 'ssh://git@paula.marmalade.de/project.git'
         ),
     ),
@@ -60,22 +60,22 @@ $config = array(
         'modules' => array(
             'solr' => array(
                 'dir'     => 'modules/marm/solr',
-                'ref'  => 'stable',
+                'ref'     => 'stable',
                 'remote'  => 'ssh://git@paula.marmalade.de/marmsolr.git'
             ),
             'libreka' => array(
                 'dir'     => 'modules/marm/libreka',
-                'ref'  => 'stable',
+                'ref'     => 'stable',
                 'remote'  => 'ssh://git@paula.marmalade.de/marmlibreka.git'
             ),
             'picturesubdir' => array(
                 'dir'     => 'modules/marm/picturesubdirs',
-                'ref'  => 'stable',
+                'ref'     => 'stable',
                 'remote'  => 'ssh://git@paula.marmalade.de/marmpicturesubdirs.git'
             ),
         ),
         'project' => array(
-            'ref'  => 'stable',
+            'ref'     => 'stable',
             'remote'  => 'ssh://git@paula.marmalade.de/project.git'
         ),
     )
