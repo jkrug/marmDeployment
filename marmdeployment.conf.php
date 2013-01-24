@@ -27,6 +27,12 @@ $config = array(
                 'ref'     => 'master',
                 'remote'  => 'ssh://git@paula.marmalade.de/marmpicturesubdirs.git'
             ),
+            //Yes! Cool stuff! Script will update itself!
+            'marmdeployment' => array(
+                'dir'     => 'marmdeployment',
+                'ref'     => 'stable',
+                'remote'  => 'ssh://git@paula.marmalade.de/marmdeployment.git'
+            ),
         ),
         'project' => array(
             'ref'     => 'master',
@@ -50,6 +56,12 @@ $config = array(
                 'ref'     => 'test',
                 'remote'  => 'ssh://git@paula.marmalade.de/marmpicturesubdirs.git'
             ),
+            //Yes! Cool stuff! Script will update itself!
+            'marmdeployment' => array(
+                'dir'     => 'marmdeployment',
+                'ref'     => 'stable',
+                'remote'  => 'ssh://git@paula.marmalade.de/marmdeployment.git'
+            ),
         ),
         'project' => array(
             'ref'     => 'test',
@@ -72,6 +84,12 @@ $config = array(
                 'dir'     => 'modules/marm/picturesubdirs',
                 'ref'     => 'stable',
                 'remote'  => 'ssh://git@paula.marmalade.de/marmpicturesubdirs.git'
+            ),
+            //Yes! Cool stuff! Script will update itself!
+            'marmdeployment' => array(
+                'dir'     => 'marmdeployment',
+                'ref'     => 'stable',
+                'remote'  => 'ssh://git@paula.marmalade.de/marmdeployment.git'
             ),
         ),
         'project' => array(
