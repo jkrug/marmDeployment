@@ -1,10 +1,70 @@
 <?php
+/**
+ * Configuration example
+ * 
+ * @author Joscha Krug<krug@marmalade.de>
+ */
 
-$modules[0]['dir'] = 'modules/marm/solr';
-$modules[0]['ref'] = 'elastic';
-$modules[1]['dir'] = 'modules/marm/libreka';
-$modules[1]['ref'] = 'master';
-$modules[2]['dir'] = 'modules/marm/picturesubdirs';
-$modules[2]['ref'] = 'master';
+// dir      = path to module relative to marmdeployment.config.php
+// status   = a position in git. Could be a hash, a branch or a tag
+// remote   = the remote of the git repo. Will be used to initialize the repo if it dousnt exist yet.
 
-
+$config = array(
+    'dev' => array(
+      'modules' => array(
+          'solr' => array(
+              'dir'     => 'modules/marm/solr',
+              'status'  => 'master',
+              'remote'  => 'ssh://git@paula.marmalade.de/marmsolr.git'
+          ),
+          'libreka' => array(
+              'dir'     => 'modules/marm/libreka',
+              'status'  => 'master',
+              'remote'  => 'ssh://git@paula.marmalade.de/marmlibreka.git'
+          ),
+          'picturesubdir' => array(
+              'dir'     => 'modules/marm/picturesubdirs',
+              'status'  => 'master',
+              'remote'  => 'ssh://git@paula.marmalade.de/marmpicturesubdirs.git'
+          ),
+      ),
+    ),
+    'staging' =>array(
+      'modules' => array(
+          'solr' => array(
+              'dir'     => 'modules/marm/solr',
+              'status'  => 'test',
+              'remote'  => 'ssh://git@paula.marmalade.de/marmsolr.git'
+          ),
+          'libreka' => array(
+              'dir'     => 'modules/marm/libreka',
+              'status'  => 'test',
+              'remote'  => 'ssh://git@paula.marmalade.de/marmlibreka.git'
+          ),
+          'picturesubdir' => array(
+              'dir'     => 'modules/marm/picturesubdirs',
+              'status'  => 'test',
+              'remote'  => 'ssh://git@paula.marmalade.de/marmpicturesubdirs.git'
+          ),
+      ),
+    ),
+    'live' =>array(
+      'modules' => array(
+          'solr' => array(
+              'dir'     => 'modules/marm/solr',
+              'status'  => 'stable',
+              'remote'  => 'ssh://git@paula.marmalade.de/marmsolr.git'
+          ),
+          'libreka' => array(
+              'dir'     => 'modules/marm/libreka',
+              'status'  => 'stable',
+              'remote'  => 'ssh://git@paula.marmalade.de/marmlibreka.git'
+          ),
+          'picturesubdir' => array(
+              'dir'     => 'modules/marm/picturesubdirs',
+              'status'  => 'stable',
+              'remote'  => 'ssh://git@paula.marmalade.de/marmpicturesubdirs.git'
+          ),
+      ),
+    )
+);
