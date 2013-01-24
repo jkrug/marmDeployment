@@ -11,60 +11,72 @@
 
 $config = array(
     'dev' => array(
-      'modules' => array(
-          'solr' => array(
-              'dir'     => 'modules/marm/solr',
-              'status'  => 'master',
-              'remote'  => 'ssh://git@paula.marmalade.de/marmsolr.git'
-          ),
-          'libreka' => array(
-              'dir'     => 'modules/marm/libreka',
-              'status'  => 'master',
-              'remote'  => 'ssh://git@paula.marmalade.de/marmlibreka.git'
-          ),
-          'picturesubdir' => array(
-              'dir'     => 'modules/marm/picturesubdirs',
-              'status'  => 'master',
-              'remote'  => 'ssh://git@paula.marmalade.de/marmpicturesubdirs.git'
-          ),
-      ),
+        'modules' => array(
+            'solr' => array(
+                'dir'     => 'modules/marm/solr',
+                'status'  => 'master',
+                'remote'  => 'ssh://git@paula.marmalade.de/marmsolr.git'
+            ),
+            'libreka' => array(
+                'dir'     => 'modules/marm/libreka',
+                'status'  => 'master',
+                'remote'  => 'ssh://git@paula.marmalade.de/marmlibreka.git'
+            ),
+            'picturesubdir' => array(
+                'dir'     => 'modules/marm/picturesubdirs',
+                'status'  => 'master',
+                'remote'  => 'ssh://git@paula.marmalade.de/marmpicturesubdirs.git'
+            ),
+        ),
+        'project' => array(
+            'status'  => 'master',
+            'remote'  => 'ssh://git@paula.marmalade.de/project.git'
+        ),
     ),
     'staging' =>array(
-      'modules' => array(
-          'solr' => array(
-              'dir'     => 'modules/marm/solr',
-              'status'  => 'test',
-              'remote'  => 'ssh://git@paula.marmalade.de/marmsolr.git'
-          ),
-          'libreka' => array(
-              'dir'     => 'modules/marm/libreka',
-              'status'  => 'test',
-              'remote'  => 'ssh://git@paula.marmalade.de/marmlibreka.git'
-          ),
-          'picturesubdir' => array(
-              'dir'     => 'modules/marm/picturesubdirs',
-              'status'  => 'test',
-              'remote'  => 'ssh://git@paula.marmalade.de/marmpicturesubdirs.git'
-          ),
-      ),
+        'modules' => array(
+            'solr' => array(
+                'dir'     => 'modules/marm/solr',
+                'status'  => 'test',
+                'remote'  => 'ssh://git@paula.marmalade.de/marmsolr.git'
+            ),
+            'libreka' => array(
+                'dir'     => 'modules/marm/libreka',
+                'status'  => 'test',
+                'remote'  => 'ssh://git@paula.marmalade.de/marmlibreka.git'
+            ),
+            'picturesubdir' => array(
+                'dir'     => 'modules/marm/picturesubdirs',
+                'status'  => 'test',
+                'remote'  => 'ssh://git@paula.marmalade.de/marmpicturesubdirs.git'
+            ),
+        ),
+        'project' => array(
+            'status'  => 'test',
+            'remote'  => 'ssh://git@paula.marmalade.de/project.git'
+        ),
     ),
     'live' =>array(
-      'modules' => array(
-          'solr' => array(
-              'dir'     => 'modules/marm/solr',
-              'status'  => 'stable',
-              'remote'  => 'ssh://git@paula.marmalade.de/marmsolr.git'
-          ),
-          'libreka' => array(
-              'dir'     => 'modules/marm/libreka',
-              'status'  => 'stable',
-              'remote'  => 'ssh://git@paula.marmalade.de/marmlibreka.git'
-          ),
-          'picturesubdir' => array(
-              'dir'     => 'modules/marm/picturesubdirs',
-              'status'  => 'stable',
-              'remote'  => 'ssh://git@paula.marmalade.de/marmpicturesubdirs.git'
-          ),
-      ),
+        'modules' => array(
+            'solr' => array(
+                'dir'     => 'modules/marm/solr',
+                'status'  => 'stable',
+                'remote'  => 'ssh://git@paula.marmalade.de/marmsolr.git'
+            ),
+            'libreka' => array(
+                'dir'     => 'modules/marm/libreka',
+                'status'  => 'stable',
+                'remote'  => 'ssh://git@paula.marmalade.de/marmlibreka.git'
+            ),
+            'picturesubdir' => array(
+                'dir'     => 'modules/marm/picturesubdirs',
+                'status'  => 'stable',
+                'remote'  => 'ssh://git@paula.marmalade.de/marmpicturesubdirs.git'
+            ),
+        ),
+        'project' => array(
+            'status'  => 'stable',
+            'remote'  => 'ssh://git@paula.marmalade.de/project.git'
+        ),
     )
 );
