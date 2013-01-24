@@ -26,22 +26,36 @@ if (php_sapi_name() == "cli")
     fclose($handle);
     
     // Check if environment is configured
-    if(!is_array($conf[$env]))
+    if(!is_array($config[$env]))
     {
         die('Environment not configured');
     }
     
+    $conf = $config[$env];
+    
     //Go to project root and deploy there
     chdir($baseDir);
-    system("git pull origin master");
+    system("git pull origin " . $conf['project']['status']);
     
-    
-    foreach ($modules as $module)
+    //Now deploy the
+    foreach ($conf['modules'] as $module)
     {
-        chdir($baseDir.$module['dir']);
-        system("git pull origin ".$module['ref']);
+        //Check if dir exists
+        if(!is_dir($baseDir.$conf['dir']))
+        {
+            mkdir($baseDir.$conf['dir'], 0755, true);
+            chdir($baseDir.$module['dir']);
+            system("git init");
+            system("git pull origin ".$module['status']);
+        }
+        else
+        {
+            chdir($baseDir.$module['dir']);
+        }
+        // pull the specified status
+        system("git pull origin ".$module['status']);
     }
-    chdir($baseDir);
+    chdir($baseDir . 'marmdeployment/');
 }
 else
 {
