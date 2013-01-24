@@ -47,6 +47,7 @@ if (php_sapi_name() == "cli")
             mkdir($baseDir.$module['dir'], 0755, true);
             chdir($baseDir.$module['dir']);
             system("git init");
+            system("git remote add origin ".$module['remote']);
             system("git pull origin ".$module['ref']);
         }
         else
@@ -58,7 +59,6 @@ if (php_sapi_name() == "cli")
         system("git fetch origin -a");
         system("git checkout ".$module['ref']);
         system("git merge ".$module['ref']);
-        //system("git pull origin ".$module['ref']);
     }
     chdir($baseDir . 'marmdeployment/');
 }
