@@ -19,7 +19,7 @@ in the future or are developed separately.
 Setup
 -----
 *    copy that module to your projectroot
-*    add a environement.txt to your project
+*    add a environment.txt to your project
 *    add a marmdeployment.conf.php to your project
      you will find an example in the module.
 	 
