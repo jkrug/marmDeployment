@@ -98,3 +98,20 @@ $config = array(
         ),
     )
 );
+
+/**
+ * With these function you could perform own code before the update
+ */
+function before_run_hook()
+{
+    echo "Action before run";
+}
+
+/**
+ * With these function you could perform own code after the update
+ */
+function after_run_hook()
+{
+    echo "Action before run";
+}
+

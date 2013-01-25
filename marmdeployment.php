@@ -14,6 +14,11 @@ if (php_sapi_name() == "cli")
     $baseDir = (__DIR__)."/../";
     include_once $baseDir.'marmdeployment.conf.php';
     
+    if(function_exists('before_run_hook'))
+    {
+        before_run_hook();
+    }
+    
     // Check environment
     $handle = fopen($baseDir.'environment.txt','r');
     
@@ -40,7 +45,7 @@ if (php_sapi_name() == "cli")
     //Now deploy the
     foreach ($conf['modules'] as $name=>$module)
     {
-		echo "\nWork on $name\n";
+        echo "\nWork on $name\n";
         //Check if dir exists
         if(!is_dir($baseDir.$module['dir']))
         {
@@ -61,6 +66,11 @@ if (php_sapi_name() == "cli")
         system("git merge origin/".$module['ref']);
     }
     chdir($baseDir . 'marmdeployment/');
+    
+    if(function_exists('after_run_hook'))
+    {
+        after_run_hook();
+    }
 }
 else
 {
