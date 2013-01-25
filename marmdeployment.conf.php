@@ -112,6 +112,6 @@ function before_run_hook()
  */
 function after_run_hook()
 {
-    echo "Action before run";
+    echo "Action after run";
 }
 
