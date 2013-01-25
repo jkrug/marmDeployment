@@ -14,11 +14,6 @@ if (php_sapi_name() == "cli")
     $baseDir = (__DIR__)."/../";
     include_once $baseDir.'marmdeployment.conf.php';
     
-    if(function_exists('before_run_hook'))
-    {
-        before_run_hook();
-    }
-    
     // Check environment
     $handle = fopen($baseDir.'environment.txt','r');
     
@@ -38,6 +33,12 @@ if (php_sapi_name() == "cli")
     
     $conf = $config[$env];
     
+    // Run hook before deployment
+    if(function_exists('before_run_hook'))
+    {
+        before_run_hook();
+    }
+
     //Go to project root and deploy there
     chdir($baseDir);
     system("git pull origin " . $conf['project']['ref']);
