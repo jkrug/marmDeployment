@@ -53,6 +53,7 @@ if (php_sapi_name() == "cli")
             mkdir($baseDir.$module['dir'], 0755, true);
             chdir($baseDir.$module['dir']);
             system("git init");
+            system("git remote add origin ".$module['remote']);
             system("git fetch origin -a");
             system("git checkout ".$module['ref']);
         }
