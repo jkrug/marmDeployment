@@ -65,6 +65,7 @@ if (php_sapi_name() == "cli")
         // pull the specified ref
         system("git fetch origin -a");
         system("git checkout ".$module['ref']);
+        system("git merge --ff-only origin/".$module['ref']);
     }
     chdir($baseDir . 'marmdeployment/');
     
