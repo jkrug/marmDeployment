@@ -41,7 +41,9 @@ if (php_sapi_name() == "cli")
 
     //Go to project root and deploy there
     chdir($baseDir);
-    system("git pull origin " . $conf['project']['ref']);
+    system("git fetch origin -a");
+    system("git checkout ".$conf['project']['ref']);
+    system("git merge --ff-only origin/".$conf['project']['ref']);
     
     //Now deploy the
     foreach ($conf['modules'] as $name=>$module)
