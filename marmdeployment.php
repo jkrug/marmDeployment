@@ -62,7 +62,7 @@ if (php_sapi_name() == "cli")
         else
         {
             chdir($baseDir.$module['dir']);
-            //system("git remote set-url origin ".$module['remote']);
+            system("git remote set-url origin ".$module['remote']);
         }
         
         // pull the specified ref
