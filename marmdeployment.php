@@ -28,7 +28,7 @@ if (php_sapi_name() == "cli")
     // Check if environment is configured
     if(!is_array($config[$env]))
     {
-        die('Environment not configured');
+        die("Environment not configured!\n");
     }
     
     $conf = $config[$env];
@@ -50,19 +50,15 @@ if (php_sapi_name() == "cli")
     {
         echo "\nWork on $name\n";
         //Check if dir exists
-        if(!is_dir($baseDir.$module['dir']))
+        if(!chdir($baseDir.$module['dir']))
         {
+			echo("Creating directory '" . $baseDir.$module['dir'] . "' for the module " . $name . " \n");
             mkdir($baseDir.$module['dir'], 0755, true);
             chdir($baseDir.$module['dir']);
             system("git init");
             system("git remote add origin ".$module['remote']);
             system("git fetch origin -a");
             system("git checkout ".$module['ref']);
-        }
-        else
-        {
-            chdir($baseDir.$module['dir']);
-            system("git remote set-url origin ".$module['remote']);
         }
         
         // pull the specified ref
