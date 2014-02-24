@@ -19,7 +19,7 @@ if (php_sapi_name() == "cli")
     
     if($handle == false)
     {
-        die('Environemt not specified!');
+        die("Environment not specified!\n");
     }
     
     $env = trim(fgets($handle));
