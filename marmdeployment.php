@@ -11,9 +11,9 @@
 
 if (php_sapi_name() == "cli")
 {
-	$baseDir = getcwd() . '/';
-	include_once $baseDir.'marmdeployment.conf.php';
-    
+    $baseDir = dirname(__FILE__) . '/../';
+    include_once $baseDir.'marmdeployment.conf.php';
+
     // Check environment
     $handle = fopen($baseDir.'environment.txt','r');
     
