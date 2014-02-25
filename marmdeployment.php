@@ -52,7 +52,7 @@ if (php_sapi_name() == "cli")
         //Check if dir exists
         if(!chdir($baseDir.$module['dir']))
         {
-			echo("Creating directory '" . $baseDir.$module['dir'] . "' for the module " . $name . " \n");
+            echo("Creating directory '" . $baseDir.$module['dir'] . "' for the module " . $name . " \n");
             mkdir($baseDir.$module['dir'], 0755, true);
             chdir($baseDir.$module['dir']);
             system("git init");
